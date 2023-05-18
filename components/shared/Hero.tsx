@@ -10,7 +10,7 @@ import DoubleChevronIcon from '@/components/shared/icons/doubleChevron';
 
 const HeroComponent = (): JSX.Element => {
   return (
-    <GenericSection as='nav'>
+    <GenericSectionWithBackground>
       <GenericInnerContainer>
         <HeroContainer>
           <Title1>
@@ -26,9 +26,19 @@ const HeroComponent = (): JSX.Element => {
           </CustomButton>
         </HeroContainer>
       </GenericInnerContainer>
-    </GenericSection>
+    </GenericSectionWithBackground>
   );
 };
+
+const GenericSectionWithBackground = styled(GenericSection)`
+  background-image: url('/images/HeroGrid.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-top: 168px;
+  padding-top: 85px;
+  padding-bottom: 56px;
+`;
 
 const HeroContainer = styled.div`
   padding: 98px 32px 16px 32px;
