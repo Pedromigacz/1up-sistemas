@@ -16,9 +16,10 @@ const CssVariables = createGlobalStyle`
 
     /* CONTAINER */
 
-    --container-width: 1544px;
+    --container-width: 1544px; // 1480 + 32 * 2 = 1544
     --container-padding: 0 32px;
     --rounded: 20px;
+    --rounded-sm: 5px;
 
     /* FONTS */
 

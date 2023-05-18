@@ -35,6 +35,10 @@ html {
     background-color: var(--background-main);
   }
 
+  strong {
+    color: var(--accent-cyan);
+  }
+
   div#__next {
     height: 100%;
   }
