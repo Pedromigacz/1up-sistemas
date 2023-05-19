@@ -61,6 +61,7 @@ const NavbarComponent = (): JSX.Element => {
           onClick={() => {
             setMobileOpen((prev) => !prev);
           }}
+          $active={mobileOpen}
         >
           <BurguerMenuIcon />
         </BurguerMenu>
@@ -149,10 +150,39 @@ const CtaButton = styled(MainButton)`
   }
 `;
 
-const BurguerMenu = styled.button`
+interface BurguerMenuProps {
+  $active: boolean;
+}
+
+const BurguerMenu = styled.button<BurguerMenuProps>`
   padding: 6px;
   margin: -6px;
   margin-left: auto;
+
+  svg * {
+    transition: 400ms ease-in-out;
+  }
+
+  .middleBar {
+    stroke: ${(props) => (props.$active ? 'transparent' : '#ffffff')};
+    transform: ${(props) => (props.$active ? 'translateX(25px)' : 'none')};
+  }
+
+  .bottomBar {
+    transform: ${(props) =>
+      props.$active
+        ? 'rotate(-41.36deg) translateX(-15px) translateY(-2px)'
+        : 'rotate(none)'};
+    width: ${(props) => (props.$active ? '24px' : '19px')};
+  }
+
+  .topBar {
+    transform: ${(props) =>
+      props.$active
+        ? 'rotate(41.36deg) translateX(6.5px) translateY(-6.5px)'
+        : 'rotate(none)'};
+    width: ${(props) => (props.$active ? '26px' : '19px')};
+  }
 
   @media (min-width: 1000px) {
     display: none;
