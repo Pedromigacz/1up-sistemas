@@ -9,13 +9,16 @@ import Link from 'next/link';
 import BurguerMenuIcon from '@/components/shared/icons/burguerMenuIcon';
 import InstagramIcon from '@/components/shared/icons/instagramIcon';
 import FacebookIcon from '@/components/shared/icons/facebookIcon';
+import { useState } from 'react';
 
 const NavbarComponent = (): JSX.Element => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
     <Nav as='nav'>
       <NavInnerContainer>
         <LogoIcon />
-        <NavList>
+        <DesktopNavList>
           <li>
             <CustomLink href='/'>Home</CustomLink>
           </li>
@@ -25,22 +28,40 @@ const NavbarComponent = (): JSX.Element => {
           <li>
             <CustomLink href='/'>Tecnologias</CustomLink>
           </li>
-          <MobileContactButton>
-            <CustomLink href='/'>Contato</CustomLink>
-          </MobileContactButton>
-          <SocialMediaListContainer>
-            <SocialMediaList>
-              <li>
-                <InstagramIcon />
-              </li>
-              <li>
-                <FacebookIcon />
-              </li>
-            </SocialMediaList>
-          </SocialMediaListContainer>
-        </NavList>
+        </DesktopNavList>
+        {mobileOpen ? (
+          <MobileNavList>
+            <li>
+              <CustomLink href='/'>Home</CustomLink>
+            </li>
+            <li>
+              <CustomLink href='/'>Serviços</CustomLink>
+            </li>
+            <li>
+              <CustomLink href='/'>Tecnologias</CustomLink>
+            </li>
+            <li>
+              <CustomLink href='/'>Contato</CustomLink>
+            </li>
+            <SocialMediaListContainer>
+              <SocialMediaList>
+                <li>
+                  <InstagramIcon />
+                </li>
+                <li>
+                  <FacebookIcon />
+                </li>
+              </SocialMediaList>
+            </SocialMediaListContainer>
+          </MobileNavList>
+        ) : null}
+
         <CtaButton>Entre em Contato</CtaButton>
-        <BurguerMenu>
+        <BurguerMenu
+          onClick={() => {
+            setMobileOpen((prev) => !prev);
+          }}
+        >
           <BurguerMenuIcon />
         </BurguerMenu>
       </NavInnerContainer>
@@ -84,7 +105,25 @@ const CustomLink = styled(Link)`
   }
 `;
 
-const NavList = styled.ul`
+const DesktopNavList = styled.ul`
+  flex-direction: row;
+  margin-left: 98px;
+  margin-right: auto;
+
+  gap: 38px;
+
+  position: static;
+  width: unset;
+  height: unset;
+  background: transparent;
+  display: flex;
+
+  @media (max-width: 999px) {
+    display: none;
+  }
+`;
+
+const MobileNavList = styled.ul`
   width: 100%;
   height: calc(100vh - 100px);
   position: fixed;
@@ -100,21 +139,12 @@ const NavList = styled.ul`
   gap: 16px;
 
   @media (min-width: 1000px) {
-    flex-direction: row;
-    margin-left: 98px;
-    margin-right: auto;
-
-    gap: 38px;
-
-    position: static;
-    width: unset;
-    height: unset;
-    background: transparent;
+    display: none;
   }
 `;
 
 const CtaButton = styled(MainButton)`
-  @media (max-width: 1000px) {
+  @media (max-width: 999px) {
     display: none;
   }
 `;
@@ -130,18 +160,8 @@ const BurguerMenu = styled.button`
   }
 `;
 
-const MobileContactButton = styled.li`
-  @media (min-width: 1000px) {
-    display: none;
-  }
-`;
-
 const SocialMediaListContainer = styled.li`
   margin-top: 21px;
-
-  @media (min-width: 1000px) {
-    display: none;
-  }
 `;
 
 const SocialMediaList = styled.ul`
