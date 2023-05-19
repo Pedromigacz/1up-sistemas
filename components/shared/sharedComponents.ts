@@ -37,6 +37,11 @@ export const MainButton = styled.button`
       0px 0.931014px 5.32008px rgba(255, 255, 255, 0.03),
       0px 0.387416px 2.21381px rgba(255, 255, 255, 0.02);
   } */
+
+  @media (max-width: 780px) {
+    font-size: 1.5rem;
+    padding: 8px 16px;
+  }
 `;
 
 // text
@@ -50,6 +55,10 @@ export const Title1 = styled.h1`
   letter-spacing: -0.01em;
   text-align: center;
   margin-bottom: 15px;
+
+  @media (max-width: 780px) {
+    font-size: 3rem;
+  }
 `;
 
 export const Title2 = styled.h2`
@@ -68,4 +77,8 @@ export const Paragraph = styled.p`
   color: var(--text-main);
   font-size: 2rem;
   text-align: center;
+
+  @media (max-width: 780px) {
+    font-size: 1.5rem;
+  }
 `;

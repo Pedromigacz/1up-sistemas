@@ -31,13 +31,19 @@ const HeroComponent = (): JSX.Element => {
 };
 
 const GenericSectionWithBackground = styled(GenericSection)`
-  background-image: url('/images/HeroGrid.svg');
+  background-image: url('/images/HeroGrid.svg#svgView(preserveAspectRatio(none))');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100%;
   margin-top: 168px;
   padding-top: 85px;
   padding-bottom: 56px;
+
+  @media (max-width: 780px) {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-size: 100% 205px;
+  }
 `;
 
 const HeroContainer = styled.div`
@@ -63,6 +69,10 @@ const HeroContainer = styled.div`
     transform: matrix(1, 0, 0, 1, 0, 0);
     pointer-events: none;
     z-index: -1;
+  }
+
+  @media (max-width: 780px) {
+    padding: 0 0 0 0;
   }
 `;
 
