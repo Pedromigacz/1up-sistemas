@@ -35,7 +35,7 @@ const GenericSectionWithBackground = styled(GenericSection)`
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
-  margin-top: 168px;
+  margin-top: 48px;
   padding-top: 85px;
   padding-bottom: 56px;
 
