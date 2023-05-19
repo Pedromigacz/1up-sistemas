@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import HeroComponent from '@/components/shared/Hero';
+import HeroComponent from '@/components/Home/Hero';
 
 export default function Home() {
   return (
