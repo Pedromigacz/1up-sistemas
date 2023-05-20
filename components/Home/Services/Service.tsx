@@ -1,29 +1,34 @@
 import { Paragraph, Title3 } from '@/components/shared/sharedComponents';
 import styled from 'styled-components';
-import Image from 'next/image';
-import SoftwareSobDeman from '@/public/images/software-sob-demanda.png';
+import Image, { StaticImageData } from 'next/image';
 
-const ServiceComponent = (): JSX.Element => {
+interface ServiceComponentProps {
+  title: JSX.Element;
+  paragraph: JSX.Element;
+  list: JSX.Element[];
+  imageSrc: StaticImageData;
+}
+
+const ServiceComponent = ({
+  title,
+  paragraph,
+  list,
+  imageSrc,
+}: ServiceComponentProps): JSX.Element => {
   return (
     <Article>
       <ContentContainer>
-        <Title3>
-          Software sob <strong>Demanda</strong>
-        </Title3>
-        <CustomParagraph>
-          Desenvolvemos aplicativos sob demanda, adaptados às necessidades
-          exclusivas de sua empresa. Maximize sua eficiência, automatize tarefas
-          repetitivas e alcance seus objetivos de negócios com nossas soluções:
-        </CustomParagraph>
+        <Title3>{title}</Title3>
+        <CustomParagraph>{paragraph}</CustomParagraph>
         <ul>
-          <CustomListItem>Aplicativos Android e IOS</CustomListItem>
-          <CustomListItem>Aplicativos Web</CustomListItem>
-          <CustomListItem>Aplicativos Desktop</CustomListItem>
+          {list.map((li, key) => (
+            <CustomListItem key={`${title}_list_${key}`}>{li}</CustomListItem>
+          ))}
         </ul>
       </ContentContainer>
       <Aside>
         <AsideImage
-          src={SoftwareSobDeman}
+          src={imageSrc}
           alt='two personal computer screen and a keyboard on a dark room'
           placeholder='blur'
           fill
@@ -39,10 +44,13 @@ const Article = styled.article`
   @media (min-width: 780px) {
     display: flex;
     gap: 40px;
+    margin-bottom: 30px;
+    align-items: center;
   }
 
   @media (min-width: 1000px) {
     gap: 200px;
+    margin-bottom: 75px;
   }
 `;
 
