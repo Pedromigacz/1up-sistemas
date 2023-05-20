@@ -50,25 +50,32 @@ export const Title1 = styled.h1`
   font-family: var(--font-title);
   font-weight: 800;
   color: var(--text-main);
-  font-size: 5rem;
+  font-size: 3rem;
   line-height: 125%;
   letter-spacing: -0.01em;
   text-align: center;
   margin-bottom: 15px;
 
-  @media (max-width: 780px) {
-    font-size: 3rem;
+  @media (min-width: 780px) {
+    font-size: 5rem;
   }
 `;
 
-export const Title2 = styled.h2`
+export const Title2 = styled(Title1)``;
+
+export const Title3 = styled.h3`
   font-family: var(--font-title);
   font-weight: 800;
   color: var(--text-main);
-  font-size: 5rem;
+  font-size: 2.5rem;
+
   line-height: 125%;
   letter-spacing: -0.01em;
-  text-align: center;
+  margin-bottom: 7px;
+
+  @media (min-width: 780px) {
+    font-size: 3rem;
+  }
 `;
 
 export const Paragraph = styled.p`

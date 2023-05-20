@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import HeroComponent from '@/components/Home/Hero';
+import ServicesComponents from '@/components/Home/Services';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <HeroComponent />
+      <ServicesComponents />
     </>
   );
 }

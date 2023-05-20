@@ -8,6 +8,7 @@ const CssVariables = createGlobalStyle`
 
     --accent-cyan: #57FFDC;
     --accent-blue: #2589BD;
+    --accent-blue-darker: #187795;
 
     --text-main: #ffffff;
     --text-2: #B1B1B1;
