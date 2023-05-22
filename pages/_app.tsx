@@ -2,6 +2,7 @@ import type { AppProps } from "next/app";
 import GlobalStyles from "@/components/shared/globaStyles";
 import CssVariables from "@/components/shared/variables";
 import localFont from "next/font/local";
+import Navbar from "@/components/Navbar";
 
 const justSans = localFont({
   src: [
@@ -59,6 +60,7 @@ export default function App({ Component, pageProps }: AppProps) {
       `}</style>
       <CssVariables />
       <GlobalStyles />
+      <Navbar />
       <Component {...pageProps} />
     </>
   );
