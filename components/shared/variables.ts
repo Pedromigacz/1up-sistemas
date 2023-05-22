@@ -5,12 +5,14 @@ const CssVariables = createGlobalStyle`
     /* COLORS*/
     --background-main: #050505;
     --background-2: #080808;
+    --background-3: #57ffdc;
 
     --accent-blue: #4967FD;
     --accent-purple: #8D5AC5;
 
     --text-main: #ffffff;
     --text-2: #EDE8EC;
+    --text-3: #101d42;
 
     --text-negative-main: #00020A;
     --text-negative-2: #050505;
@@ -22,9 +24,12 @@ const CssVariables = createGlobalStyle`
     --container-width: 1544px;
     --container-padding: 0 32px;
     --rounded: 20px;
-    --rounded-sm: 2px;
+    --rounded-sm: 5px;
 
     /* FONTS */
+
+    --font-main: "Argentum Sans", sans-serif;
+    --font-2:  "JUST Sans", sans-serif;
 
 
     /* @media(min-width: 700px) {
