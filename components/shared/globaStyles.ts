@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
   *,
@@ -10,6 +10,10 @@ const GlobalStyles = createGlobalStyle`
 
 html {
   font-size: 10px;
+}
+
+strong {
+  color: var(--background-3);
 }
 
 

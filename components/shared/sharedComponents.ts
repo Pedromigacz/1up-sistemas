@@ -45,7 +45,14 @@ export const Title = styled.h1`
   color: var(--text-main);
 `;
 
-export const SubTitle = styled.h2``;
+export const SubTitle = styled.h2`
+  font-family: "JUST Sans";
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 39px;
+
+  color: #ffffff;
+`;
 
 export const Paragraph = styled.p`
   font-family: var(--font-main);
