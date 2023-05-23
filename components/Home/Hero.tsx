@@ -44,6 +44,10 @@ const GenericSectionWithBackground = styled(GenericSection)`
     padding-bottom: 0px;
     background-size: 100% 205px;
   }
+
+  @media (max-width: 1000px) {
+    padding-top: 100px;
+  }
 `;
 
 const HeroContainer = styled.div`

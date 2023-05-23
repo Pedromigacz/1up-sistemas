@@ -72,8 +72,14 @@ const NavbarComponent = (): JSX.Element => {
 
 const Nav = styled(GenericSection)`
   height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
 
   @media (min-width: 1000px) {
+    position: static;
+
     height: 120px;
   }
 `;
@@ -81,6 +87,7 @@ const Nav = styled(GenericSection)`
 const NavInnerContainer = styled(GenericInnerContainer)`
   display: flex;
   align-items: center;
+  background-color: var(--background-main);
 `;
 
 const CustomLink = styled(Link)`
@@ -126,12 +133,13 @@ const DesktopNavList = styled.ul`
 
 const MobileNavList = styled.ul`
   width: 100%;
-  height: calc(100vh - 100px);
+  height: 100%;
+  padding-top: 100px;
   position: fixed;
-  top: 99px;
+  top: 0px;
   left: 0px;
   background: var(--background-2);
-  z-index: 99;
+  z-index: -1;
 
   display: flex;
   flex-direction: column;
