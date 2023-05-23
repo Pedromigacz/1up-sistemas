@@ -4,6 +4,7 @@ import localFont from 'next/font/local';
 import GlobalStyles from '@/components/shared/globaStyles';
 import CssVariables from '@/components/shared/variables';
 import NavbarComponent from '@/components/shared/Navbar';
+import FooterComponent from '@/components/shared/Footer';
 
 const justSans = localFont({
   src: [
@@ -63,6 +64,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <GlobalStyles />
       <NavbarComponent />
       <Component {...pageProps} />
+      <FooterComponent />
     </>
   );
 }
