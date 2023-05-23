@@ -1,15 +1,17 @@
 import styled from 'styled-components';
+import Link from 'next/link';
+import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+
 import {
   GenericInnerContainer,
   GenericSection,
   MainButton,
 } from '@/components/shared/sharedComponents';
 import LogoIcon from '@/components/shared/icons/logo';
-import Link from 'next/link';
 import BurguerMenuIcon from '@/components/shared/icons/burguerMenuIcon';
 import InstagramIcon from '@/components/shared/icons/instagramIcon';
 import FacebookIcon from '@/components/shared/icons/facebookIcon';
-import { useState } from 'react';
 
 const NavbarComponent = (): JSX.Element => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -29,32 +31,119 @@ const NavbarComponent = (): JSX.Element => {
             <CustomLink href='/'>Tecnologias</CustomLink>
           </li>
         </DesktopNavList>
-        {mobileOpen ? (
-          <MobileNavList>
-            <li>
-              <CustomLink href='/'>Home</CustomLink>
-            </li>
-            <li>
-              <CustomLink href='/'>Serviços</CustomLink>
-            </li>
-            <li>
-              <CustomLink href='/'>Tecnologias</CustomLink>
-            </li>
-            <li>
-              <CustomLink href='/'>Contato</CustomLink>
-            </li>
-            <SocialMediaListContainer>
-              <SocialMediaList>
-                <li>
-                  <InstagramIcon />
-                </li>
-                <li>
-                  <FacebookIcon />
-                </li>
-              </SocialMediaList>
-            </SocialMediaListContainer>
-          </MobileNavList>
-        ) : null}
+        <AnimatePresence>
+          {mobileOpen ? (
+            <MobileNavList
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              exit={{
+                opacity: 0,
+              }}
+              transition={{
+                duration: 0.2,
+              }}
+            >
+              <motion.li
+                initial={{
+                  y: 60,
+                  opacity: 0,
+                }}
+                animate={{
+                  y: 0,
+                  opacity: 1,
+                }}
+                transition={{
+                  delay: 0.16,
+                }}
+              >
+                <CustomLink href='/'>Home</CustomLink>
+              </motion.li>
+              <motion.li
+                initial={{
+                  y: 60,
+                  opacity: 0,
+                }}
+                animate={{
+                  y: 0,
+                  opacity: 1,
+                }}
+                transition={{
+                  delay: 0.22,
+                }}
+              >
+                <CustomLink href='/'>Serviços</CustomLink>
+              </motion.li>
+              <motion.li
+                initial={{
+                  y: 60,
+                  opacity: 0,
+                }}
+                animate={{
+                  y: 0,
+                  opacity: 1,
+                }}
+                transition={{
+                  delay: 0.28,
+                }}
+              >
+                <CustomLink href='/'>Tecnologias</CustomLink>
+              </motion.li>
+              <motion.li
+                initial={{
+                  y: 60,
+                  opacity: 0,
+                }}
+                animate={{
+                  y: 0,
+                  opacity: 1,
+                }}
+                transition={{
+                  delay: 0.34,
+                }}
+              >
+                <CustomLink href='/'>Contato</CustomLink>
+              </motion.li>
+              <SocialMediaListContainer>
+                <SocialMediaList>
+                  <motion.li
+                    initial={{
+                      y: 60,
+                      opacity: 0,
+                    }}
+                    animate={{
+                      y: 0,
+                      opacity: 1,
+                    }}
+                    transition={{
+                      delay: 0.4,
+                    }}
+                  >
+                    <InstagramIcon />
+                  </motion.li>
+                  <motion.li
+                    initial={{
+                      y: 60,
+                      opacity: 0,
+                    }}
+                    animate={{
+                      y: 0,
+                      opacity: 1,
+                    }}
+                    transition={{
+                      delay: 0.4,
+                    }}
+                  >
+                    <FacebookIcon />
+                  </motion.li>
+                </SocialMediaList>
+              </SocialMediaListContainer>
+            </MobileNavList>
+          ) : null}
+        </AnimatePresence>
 
         <CtaButton>Entre em Contato</CtaButton>
         <BurguerMenu
@@ -131,7 +220,7 @@ const DesktopNavList = styled.ul`
   }
 `;
 
-const MobileNavList = styled.ul`
+const MobileNavList = styled(motion.ul)`
   width: 100%;
   height: 100%;
   padding-top: 100px;
