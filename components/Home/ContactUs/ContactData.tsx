@@ -32,11 +32,17 @@ const ContactDataComponent = (): JSX.Element => {
 };
 
 const ContactData = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 50px;
-  row-gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   margin-top: 32px;
+
+  @media (min-width: 480px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 40px;
+  }
 `;
 
 const Label = styled(Paragraph)`

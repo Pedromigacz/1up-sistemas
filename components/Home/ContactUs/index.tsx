@@ -19,11 +19,11 @@ const ContactUsComponent = (): JSX.Element => {
           <Title2>
             <strong>Trabalhe</strong> Conosco
           </Title2>
-          <Paragraph>
+          <CustomParagraph>
             Entre em contato conosco para tirar dúvidas, obter mais informações
             ou solicitar um orçamento. Nossa equipe está pronta para atender
             você.
-          </Paragraph>
+          </CustomParagraph>
           <FormComponent />
           <ContactDataComponent />
         </ContentContainer>
@@ -44,10 +44,14 @@ const ContactSection = styled(GenericSection)`
 `;
 
 const ContactInnerContainer = styled(GenericInnerContainer)`
-  display: grid;
-  grid-template-columns: 11fr 9fr;
-  column-gap: 150px;
+  display: block;
   padding: 160px 32px;
+
+  @media (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 11fr 9fr;
+    column-gap: 150px;
+  }
 `;
 
 const ContentContainer = styled.div`
@@ -60,10 +64,19 @@ const ContentContainer = styled.div`
   }
 `;
 
+const CustomParagraph = styled(Paragraph)`
+  max-width: 730px;
+`;
+
 const AsideContainer = styled.aside`
-  position: relative; // Important for NEXT IMAGE!!!
-  aspect-ratio: 59 / 72;
-  max-width: 593px;
+  display: none;
+
+  @media (min-width: 1200px) {
+    display: block;
+    position: relative; // Important for NEXT IMAGE!!!
+    aspect-ratio: 59 / 72;
+    max-width: 593px;
+  }
 `;
 
 const AsideImage = styled(Image)`
