@@ -9,10 +9,11 @@ import {
 } from '@/components/shared/sharedComponents';
 import ContactIllustration from '@/public/images/contato.png';
 import FormComponent from '@/components/Home/ContactUs/Form';
+import ContactDataComponent from './ContactData';
 
 const ContactUsComponent = (): JSX.Element => {
   return (
-    <GenericSection>
+    <ContactSection>
       <ContactInnerContainer>
         <ContentContainer>
           <Title2>
@@ -24,6 +25,7 @@ const ContactUsComponent = (): JSX.Element => {
             você.
           </Paragraph>
           <FormComponent />
+          <ContactDataComponent />
         </ContentContainer>
         <AsideContainer>
           <AsideImage
@@ -33,9 +35,13 @@ const ContactUsComponent = (): JSX.Element => {
           />
         </AsideContainer>
       </ContactInnerContainer>
-    </GenericSection>
+    </ContactSection>
   );
 };
+
+const ContactSection = styled(GenericSection)`
+  background-color: var(--background-2);
+`;
 
 const ContactInnerContainer = styled(GenericInnerContainer)`
   display: grid;

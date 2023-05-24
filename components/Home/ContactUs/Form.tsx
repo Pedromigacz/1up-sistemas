@@ -54,7 +54,7 @@ const FormComponent = (): JSX.Element => {
 };
 
 const Form = styled.form`
-  margin-top: 38px;
+  margin-top: 32px;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -63,7 +63,7 @@ const Form = styled.form`
 const CustomMainButton = styled(MainButton)`
   align-self: flex-start;
   font-size: 2rem;
-  margin-top: 32px;
+  margin-top: 24px;
 `;
 
 export default FormComponent;
