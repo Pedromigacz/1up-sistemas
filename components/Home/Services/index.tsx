@@ -40,9 +40,9 @@ const services = [
     title: <>Ciência de Dados</>,
     paragraph: (
       <>
-        Potencialize a eficiência e precisão dos seus negócios com nosso
-        software de ciência de dados sob demanda. Soluções personalizadas para
-        suas necessidades únicas.
+        Maximize a eficiência e precisão dos seus negócios com nossas avançadas
+        soluções de ciência de dados. Oferecemos uma ampla gama de soluções
+        personalizadas para atender às suas necessidades exclusivas.
       </>
     ),
     list: [
