@@ -188,14 +188,10 @@ const CustomLink = styled(Link)`
   font-size: 4.8rem;
   color: #ffffff;
 
-  transition: 400ms ease-in-out;
-
-  outline: 2px solid transparent;
-  outline-offset: -2px;
-
-  &:hover {
-    color: var(--accent-cyan);
-    outline-color: var(--accent-cyan);
+  :hover {
+    outline: 3px solid var(--background-3);
+    outline-offset: -2px;
+    transition: 100ms;
   }
 
   @media (min-width: 1000px) {
@@ -206,8 +202,6 @@ const CustomLink = styled(Link)`
 const DesktopList = styled.ul`
   flex-direction: row;
   position: static;
-  width: unset;
-  height: unset;
   background: transparent;
   display: flex;
 
