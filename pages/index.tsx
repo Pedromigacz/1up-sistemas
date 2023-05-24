@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import HeroComponent from '@/components/Home/Hero';
 import ServicesComponents from '@/components/Home/Services';
+import ContactUsComponent from '@/components/Home/ContactUs';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <HeroComponent />
       <ServicesComponents />
+      <ContactUsComponent />
     </>
   );
 }

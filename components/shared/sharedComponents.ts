@@ -61,7 +61,7 @@ export const Title1 = styled.h1`
   }
 `;
 
-export const Title2 = styled(Title1)``;
+export const Title2 = styled(Title1).attrs({ as: 'h2' })``;
 
 export const Title3 = styled.h3`
   font-family: var(--font-title);
