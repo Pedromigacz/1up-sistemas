@@ -169,7 +169,6 @@ const Nav = styled(GenericSection)`
 
   @media (min-width: 1000px) {
     position: static;
-
     height: 120px;
   }
 `;

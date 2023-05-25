@@ -6,13 +6,17 @@ const CssVariables = createGlobalStyle`
     --background-main: #050505;
     --background-2: #080808;
     --background-3: #57ffdc;
+    --background-4: #161616;
 
     --accent-blue: #4967FD;
+    --accent-blue: #2589bd;
     --accent-purple: #8D5AC5;
 
     --text-main: #ffffff;
     --text-2: #EDE8EC;
     --text-3: #101d42;
+
+    --text-grey: #b1b1b1;
 
     --text-negative-main: #00020A;
     --text-negative-2: #050505;

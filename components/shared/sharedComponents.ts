@@ -17,6 +17,10 @@ export const MainButton = styled.button`
   font-weight: 700;
   font-size: 25px;
 
+  svg {
+    margin-left: 10px;
+  }
+
   color: var(--text-3);
   background: var(--background-3);
 
@@ -33,16 +37,25 @@ export const MainButton = styled.button`
   :hover {
     cursor: pointer;
   }
+
+  @media (max-width: 1000px) {
+    font-size: 15px;
+  }
 `;
 
 export const Title = styled.h1`
   font-family: var(--font-2);
   font-weight: 800;
   font-size: 50px;
+  margin-bottom: 15px;
 
   letter-spacing: -0.01em;
 
   color: var(--text-main);
+
+  @media (max-width: 1000px) {
+    font-size: 30px;
+  }
 `;
 
 export const SubTitle = styled.h2`
@@ -61,4 +74,8 @@ export const Paragraph = styled.p`
   line-height: 23px;
 
   color: var(--text-main);
+
+  @media (max-width: 1000px) {
+    font-size: 15px;
+  }
 `;
