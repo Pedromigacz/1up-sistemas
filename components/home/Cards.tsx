@@ -102,6 +102,13 @@ const Card = styled.li`
   padding: 50px 50px 80px 40px;
   border-radius: 20px;
 
+  box-shadow: 0px -2px 80px rgba(0, 0, 0, 0.5),
+    0px -0.835552px 33.4221px rgba(0, 0, 0, 0.0503198),
+    0px -0.446726px 17.869px rgba(0, 0, 0, 0.0417275),
+    0px -0.250431px 10.0172px rgba(0, 0, 0, 0.035),
+    0px -0.133002px 5.32008px rgba(0, 0, 0, 0.0282725),
+    0px -0.0553451px 2.21381px rgba(0, 0, 0, 0.0196802);
+
   @media (max-width: 1200px) {
     padding: 40px 40px 34px 40px;
   }

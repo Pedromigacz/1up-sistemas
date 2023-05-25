@@ -40,6 +40,7 @@ const CustomGenericSection = styled(GenericSection)`
 
   @media (max-width: 1000px) {
     margin-top: 155px;
+    margin-bottom: 300px;
   }
 `;
 
