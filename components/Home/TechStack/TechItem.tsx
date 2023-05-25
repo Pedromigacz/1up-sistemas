@@ -6,15 +6,15 @@ interface TechItemProps {
   title: string;
   paragraph: string;
   Icon: StaticImageData;
-  // socialProof: (() => JSX.Element)[];
+  socialProof: any[];
 }
 
 const TechItemComponent = ({
   title,
   paragraph,
   Icon,
-}: // socialProof,
-TechItemProps): JSX.Element => {
+  socialProof,
+}: TechItemProps): JSX.Element => {
   return (
     <TechItemContainer>
       <IconContainer>
@@ -22,13 +22,13 @@ TechItemProps): JSX.Element => {
       </IconContainer>
       <Title>{title}</Title>
       <Paragraph>{paragraph}</Paragraph>
-      {/* <ShowcaseList>
+      <ShowcaseList>
         {socialProof.map((SocialProofIcon, key) => (
           <SocialProofIconWrapper key={`SocialProofIcon_${key}`}>
-            <SocialProofIcon />
+            <Image src={SocialProofIcon} alt='' />
           </SocialProofIconWrapper>
         ))}
-      </ShowcaseList> */}
+      </ShowcaseList>
     </TechItemContainer>
   );
 };
@@ -86,6 +86,7 @@ const ShowcaseList = styled.ul`
   place-items: center;
   grid-template-columns: 1fr 1fr;
   gap: 22px;
+  margin-top: auto;
 `;
 
 const SocialProofIconWrapper = styled.li`

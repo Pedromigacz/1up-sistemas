@@ -7,32 +7,32 @@ import styled from 'styled-components';
 import { Autoplay } from 'swiper';
 
 import Dotnet from '@/public/images/tech-stack/dotnet.png';
-// import NetflixIcon from '../../Icons/TechStack/companies/Netflix';
-// import NodeIcon from '../../Icons/TechStack/Node';
+import IntelIcon from '@/public/images/platforms/intel.svg';
+import MicrosoftIcon from '@/public/images/platforms/microsoft.svg';
 
 import SqlServer from '@/public/images/tech-stack/sql-server.png';
-// import AirbnbIcon from '../../Icons/TechStack/companies/Airbnb';
-// import ZoomIcon from '../../Icons/TechStack/companies/Zoom';
+import DellIcon from '@/public/images/platforms/dell.svg';
+import SiemensIcon from '@/public/images/platforms/siemens.svg';
 
 import Flutter from '@/public/images/tech-stack/flutter.png';
-// import NasaIcon from '../../Icons/TechStack/companies/Nasa';
-// import RobinhoodIcon from '../../Icons/TechStack/companies/Robinhood';
+import GoogleIcon from '@/public/images/platforms/google.svg';
+import BmwIcon from '@/public/images/platforms/bmw.svg';
 
 import Python from '@/public/images/tech-stack/python.png';
-// import TypeformIcon from '../../Icons/TechStack/companies/Typeform';
-// import NotionIcon from '../../Icons/TechStack/companies/Notion';
+import FacebookIcon from '@/public/images/platforms/facebook.svg';
+import InstagramIcon from '@/public/images/platforms/instagram.svg';
 
 import Docker from '@/public/images/tech-stack/docker.png';
-// import NetlifyIcon from '../../Icons/TechStack/companies/Netlify';
-// import NikeIcon from '../../Icons/TechStack/companies/Nike';
+import UberIcon from '@/public/images/platforms/uber.svg';
+import NetflixIcon from '@/public/images/platforms/netflix.svg';
 
 import Kubernetes from '@/public/images/tech-stack/kubernetes.png';
-// import NetlifyIcon from '../../Icons/TechStack/companies/Netlify';
-// import NikeIcon from '../../Icons/TechStack/companies/Nike';
+import AirbnbIcon from '@/public/images/platforms/airbnb.svg';
+import SpotifyIcon from '@/public/images/platforms/spotify.svg';
 
 import Aws from '@/public/images/tech-stack/aws.png';
-// import NetlifyIcon from '../../Icons/TechStack/companies/Netlify';
-// import NikeIcon from '../../Icons/TechStack/companies/Nike';
+import AmazonIcon from '@/public/images/platforms/amazon.svg';
+import NasaIcon from '@/public/images/platforms/nasa.svg';
 
 const TechStackList = [
   {
@@ -40,49 +40,49 @@ const TechStackList = [
     paragraph:
       'Construa aplicativos escaláveis e seguros com Dotnet. Uma plataforma de desenvolvimento flexível e poderosa para projetos de todos os tamanhos.',
     icon: Dotnet,
-    socialProof: [<></>, <></>],
+    socialProof: [IntelIcon, MicrosoftIcon],
   },
   {
     title: 'SQL Server',
     paragraph:
       'Gerencie seus dados com segurança e escalabilidade usando o SQL Server. Uma solução confiável e robusta para empresas de todos os tamanhos.',
     icon: SqlServer,
-    socialProof: [<></>, <></>],
+    socialProof: [DellIcon, SiemensIcon],
   },
   {
     title: 'Flutter',
     paragraph:
       'Crie apps para Android, iOS e web com Flutter, a plataforma multiplataforma.',
     icon: Flutter,
-    socialProof: [<></>, <></>],
+    socialProof: [GoogleIcon, BmwIcon],
   },
   {
     title: 'Python',
     paragraph:
       'Desenvolva soluções rápidas com Python, popular para ciência de dados e desenvolvimento web.',
     icon: Python,
-    socialProof: [<></>, <></>],
+    socialProof: [FacebookIcon, InstagramIcon],
   },
   {
     title: 'Docker',
     paragraph:
       'Simplifique o gerenciamento de aplicativos com Docker. Crie, implante e execute aplicativos em qualquer lugar com facilidade.',
     icon: Docker,
-    socialProof: [<></>, <></>],
+    socialProof: [UberIcon, NetflixIcon],
   },
   {
     title: 'Kubernetes',
     paragraph:
       'Automatize a gestão de aplicativos em nuvem com Kubernetes, orquestrador de contêineres.',
     icon: Kubernetes,
-    socialProof: [<></>, <></>],
+    socialProof: [AirbnbIcon, SpotifyIcon],
   },
   {
     title: 'AWS',
     paragraph:
       'Expanda seus negócios com AWS. Serviços de computação em nuvem confiáveis por milhões de clientes.',
     icon: Aws,
-    socialProof: [<></>, <></>],
+    socialProof: [AmazonIcon, NasaIcon],
   },
 ];
 
@@ -103,7 +103,7 @@ const TechStackSliderComponent = (): JSX.Element => {
             title={tech.title}
             paragraph={tech.paragraph}
             Icon={tech.icon}
-            // socialProof={tech.socialProof}
+            socialProof={tech.socialProof}
           />
         </CustomSwiperSlide>
       ))}
