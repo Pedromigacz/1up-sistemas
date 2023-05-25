@@ -39,18 +39,14 @@ const ServiceComponent = ({
 };
 
 const Article = styled.article`
-  margin-bottom: 20px;
-
   @media (min-width: 780px) {
     display: flex;
     gap: 40px;
-    margin-bottom: 30px;
     align-items: center;
   }
 
   @media (min-width: 1000px) {
     gap: 200px;
-    margin-bottom: 75px;
   }
 `;
 

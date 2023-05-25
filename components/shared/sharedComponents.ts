@@ -55,6 +55,7 @@ export const Title1 = styled.h1`
   letter-spacing: -0.01em;
   text-align: center;
   margin-bottom: 15px;
+  max-width: 906px;
 
   @media (min-width: 780px) {
     font-size: 5rem;
@@ -84,6 +85,7 @@ export const Paragraph = styled.p`
   color: var(--text-main);
   font-size: 2rem;
   text-align: center;
+  max-width: 906px;
 
   @media (max-width: 780px) {
     font-size: 1.5rem;

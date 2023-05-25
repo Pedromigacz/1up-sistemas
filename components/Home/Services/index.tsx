@@ -74,16 +74,18 @@ const ServicesComponents = (): JSX.Element => {
   return (
     <GenericSection>
       <ServicesSectionInnerContainer>
-        <Title2>
+        <CustomTitle2>
           Conheça nosso serviço de <strong>Excelência</strong>
-        </Title2>
+        </CustomTitle2>
         <CustomParagraph>
           Conheça nosso compromisso com a excelência em serviços e descubra por
           que somos a escolha ideal para suas necessidades
         </CustomParagraph>
-        {services.map((serviceData, key) => (
-          <Service {...serviceData} key={`Service_${key}`} />
-        ))}
+        <ServicesContainer>
+          {services.map((serviceData, key) => (
+            <Service {...serviceData} key={`Service_${key}`} />
+          ))}
+        </ServicesContainer>
         {/* <Service /> */}
       </ServicesSectionInnerContainer>
     </GenericSection>
@@ -98,12 +100,30 @@ const ServicesSectionInnerContainer = styled(GenericInnerContainer)`
   }
 `;
 
+const CustomTitle2 = styled(Title2)`
+  margin: 0 auto;
+`;
+
 const CustomParagraph = styled(Paragraph)`
   margin: 0 auto 30px auto;
   max-width: 880px;
 
   @media (min-width: 780px) {
     margin-bottom: 90px;
+  }
+`;
+
+const ServicesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: 780px) {
+    gap: 30px;
+  }
+
+  @media (min-width: 1000px) {
+    gap: 75px;
   }
 `;
 
