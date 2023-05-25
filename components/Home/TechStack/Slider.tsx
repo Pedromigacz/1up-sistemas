@@ -97,7 +97,7 @@ const TechStackSliderComponent = (): JSX.Element => {
       }}
       modules={[Autoplay]}
     >
-      {TechStackList.map((tech, key) => (
+      {[...TechStackList, ...TechStackList].map((tech, key) => (
         <CustomSwiperSlide key={`tech_${tech.title + key}`}>
           <TechItem
             title={tech.title}
