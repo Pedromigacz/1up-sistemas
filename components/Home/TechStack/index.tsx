@@ -17,9 +17,7 @@ const TechStackComponent = (): JSX.Element => {
           utilizada pelas mais renomadas empresas de tecnologia ao redor do
           mundo
         </CustomParagraph>
-        <OverflowContainer>
-          <TechStackSliderComponent />
-        </OverflowContainer>
+        <TechStackSliderComponent />
       </TechStackInnerContainer>
     </TechStackSection>
   );
@@ -36,11 +34,7 @@ const TechStackInnerContainer = styled(GenericInnerContainer)`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-
-const OverflowContainer = styled.div`
-  overflow: hidden;
-  width: 100%;
+  max-width: 1724px;
 `;
 
 const CustomParagraph = styled(Paragraph)`

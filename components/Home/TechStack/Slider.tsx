@@ -6,6 +6,8 @@ import 'swiper/css/autoplay';
 import styled from 'styled-components';
 import { Autoplay } from 'swiper';
 
+import CarouselArrow from '@/components/shared/icons/carouselArrow';
+
 import Dotnet from '@/public/images/tech-stack/dotnet.png';
 import IntelIcon from '@/public/images/platforms/intel.svg';
 import MicrosoftIcon from '@/public/images/platforms/microsoft.svg';
@@ -33,6 +35,7 @@ import SpotifyIcon from '@/public/images/platforms/spotify.svg';
 import Aws from '@/public/images/tech-stack/aws.png';
 import AmazonIcon from '@/public/images/platforms/amazon.svg';
 import NasaIcon from '@/public/images/platforms/nasa.svg';
+import { useRef } from 'react';
 
 const TechStackList = [
   {
@@ -87,31 +90,87 @@ const TechStackList = [
 ];
 
 const TechStackSliderComponent = (): JSX.Element => {
+  const swiperRef = useRef();
+
   return (
-    <CustomSwiper
-      spaceBetween={20}
-      slidesPerView={'auto'}
-      loop
-      autoplay={{
-        disableOnInteraction: true,
-      }}
-      modules={[Autoplay]}
-    >
-      {[...TechStackList, ...TechStackList].map((tech, key) => (
-        <CustomSwiperSlide key={`tech_${tech.title + key}`}>
-          <TechItem
-            title={tech.title}
-            paragraph={tech.paragraph}
-            Icon={tech.icon}
-            socialProof={tech.socialProof}
-          />
-        </CustomSwiperSlide>
-      ))}
-    </CustomSwiper>
+    <Container>
+      <CarouselButton
+        $rotate
+        onClick={() => {
+          // @ts-ignore
+          swiperRef.current.slideNext();
+        }}
+      >
+        <CarouselArrow />
+      </CarouselButton>
+      <CustomSwiper
+        spaceBetween={20}
+        slidesPerView={'auto'}
+        loop
+        autoplay={{
+          disableOnInteraction: true,
+        }}
+        modules={[Autoplay]}
+        onSwiper={(swiper) => {
+          // @ts-ignore
+          swiperRef.current = swiper;
+        }}
+      >
+        {[...TechStackList, ...TechStackList].map((tech, key) => (
+          <CustomSwiperSlide key={`tech_${tech.title + key}`}>
+            <TechItem
+              title={tech.title}
+              paragraph={tech.paragraph}
+              Icon={tech.icon}
+              socialProof={tech.socialProof}
+            />
+          </CustomSwiperSlide>
+        ))}
+      </CustomSwiper>
+      <CarouselButton
+        onClick={() => {
+          // @ts-ignore
+          swiperRef.current.slidePrev();
+        }}
+      >
+        <CarouselArrow />
+      </CarouselButton>
+    </Container>
   );
 };
 
+const Container = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+`;
+
+interface CarouselButtonProps {
+  $rotate?: boolean;
+}
+
+const CarouselButton = styled.button<CarouselButtonProps>`
+  min-width: 70px;
+  height: 70px;
+  background-color: var(--background-main);
+  border: 1px solid var(--accent-cyan);
+  display: grid;
+  place-items: center;
+  border-radius: 100%;
+  position: relative;
+  padding-left: 4px;
+  /* right: ${(props) => (props.$rotate ? '90px' : '-90px')}; */
+  margin-right: ${(props) => (props.$rotate ? '20px' : '0')};
+  margin-left: ${(props) => (props.$rotate ? '0' : '20px')};
+
+  transform: ${(props) => (props.$rotate ? 'rotate(180deg)' : 'none')};
+`;
+
 const CustomSwiper = styled(Swiper)`
+  overflow: hidden;
+  width: 100%;
+  /* transform: translateX(69px); */
+
   h3 {
     color: var(--accent-blue);
   }
