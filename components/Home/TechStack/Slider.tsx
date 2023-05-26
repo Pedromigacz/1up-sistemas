@@ -98,7 +98,7 @@ const TechStackSliderComponent = (): JSX.Element => {
         $rotate
         onClick={() => {
           // @ts-ignore
-          swiperRef.current.slideNext();
+          swiperRef.current.slidePrev();
         }}
       >
         <CarouselArrow />
@@ -123,6 +123,7 @@ const TechStackSliderComponent = (): JSX.Element => {
               paragraph={tech.paragraph}
               Icon={tech.icon}
               socialProof={tech.socialProof}
+              cyan={key % 2 == 0}
             />
           </CustomSwiperSlide>
         ))}
@@ -130,7 +131,7 @@ const TechStackSliderComponent = (): JSX.Element => {
       <CarouselButton
         onClick={() => {
           // @ts-ignore
-          swiperRef.current.slidePrev();
+          swiperRef.current.slideNext();
         }}
       >
         <CarouselArrow />
@@ -169,16 +170,6 @@ const CarouselButton = styled.button<CarouselButtonProps>`
 const CustomSwiper = styled(Swiper)`
   overflow: hidden;
   width: 100%;
-  /* transform: translateX(69px); */
-
-  h3 {
-    color: var(--accent-blue);
-  }
-  div:nth-child(2n) {
-    h3 {
-      color: var(--accent-cyan);
-    }
-  }
 `;
 
 const CustomSwiperSlide = styled(SwiperSlide)`

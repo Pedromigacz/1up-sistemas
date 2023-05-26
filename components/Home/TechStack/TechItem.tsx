@@ -7,6 +7,7 @@ interface TechItemProps {
   paragraph: string;
   Icon: StaticImageData;
   socialProof: any[];
+  cyan: boolean;
 }
 
 const TechItemComponent = ({
@@ -14,13 +15,14 @@ const TechItemComponent = ({
   paragraph,
   Icon,
   socialProof,
+  cyan,
 }: TechItemProps): JSX.Element => {
   return (
     <TechItemContainer>
       <IconContainer>
         <CustomImage src={Icon} alt='' fill />
       </IconContainer>
-      <Title>{title}</Title>
+      <Title $cyan={cyan}>{title}</Title>
       <Paragraph>{paragraph}</Paragraph>
       <ShowcaseList>
         {socialProof.map((SocialProofIcon, key) => (
@@ -67,10 +69,16 @@ const CustomImage = styled(Image)`
   object-position: left;
 `;
 
-const Title = styled.h3`
+interface TitleProps {
+  $cyan: boolean;
+}
+
+const Title = styled.h3<TitleProps>`
   font-size: 3rem;
   margin-bottom: 4px;
   font-weight: 700;
+  color: ${(props) =>
+    props.$cyan ? 'var(--accent-cyan)' : 'var(--accent-blue)'};
 `;
 
 const Paragraph = styled.p`
