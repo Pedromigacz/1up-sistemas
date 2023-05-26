@@ -21,7 +21,7 @@ const CardsPage = (): JSX.Element => {
             <Card>
               <ProfileContainer>
                 <ImageContainer>
-                  <Image src={FirstImage} alt={""} />
+                  <Image src={FirstImage} alt={"Profile Icon"} />
                 </ImageContainer>
                 <div>
                   <Name>Alibaba</Name>
@@ -40,7 +40,7 @@ const CardsPage = (): JSX.Element => {
             <Card>
               <ProfileContainer>
                 <ImageContainer>
-                  <Image src={SecondImage} alt={""} />
+                  <Image src={SecondImage} alt={"Profile Icon"} />
                 </ImageContainer>
                 <div>
                   <Name>Facebook</Name>
@@ -59,7 +59,7 @@ const CardsPage = (): JSX.Element => {
             <Card>
               <ProfileContainer>
                 <ImageContainer>
-                  <Image src={ThreeImage} alt={""} />
+                  <Image src={ThreeImage} alt={"Profile Icon"} />
                 </ImageContainer>
                 <div>
                   <Name>Alibaba</Name>
@@ -87,6 +87,8 @@ const CardsContainer = styled.ul`
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 
+  margin-bottom: 210px;
+
   li:nth-child(2n) svg path {
     fill: #2589bd;
   }
@@ -94,6 +96,7 @@ const CardsContainer = styled.ul`
   @media (max-width: 1200px) {
     display: flex;
     flex-direction: column;
+    margin-bottom: 60px;
   }
 `;
 
