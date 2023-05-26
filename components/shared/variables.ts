@@ -33,7 +33,10 @@ const CssVariables = createGlobalStyle`
     /* FONTS */
 
     --font-main: "Argentum Sans", sans-serif;
+    // font-family: var(--font-main);
+
     --font-2:  "JUST Sans", sans-serif;
+    // font-family: var(--font-2);
 
 
     /* @media(min-width: 700px) {
