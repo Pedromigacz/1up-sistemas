@@ -28,6 +28,10 @@ const TechStackSection = styled(GenericSection)`
   background-position: center;
   background-repeat: no-repeat;
   padding: 200px 0;
+
+  @media (max-width: 500px) {
+    display: block;
+  }
 `;
 
 const TechStackInnerContainer = styled(GenericInnerContainer)`
@@ -35,6 +39,31 @@ const TechStackInnerContainer = styled(GenericInnerContainer)`
   flex-direction: column;
   align-items: center;
   max-width: 1724px;
+
+  @media (max-width: 1724px) {
+    max-width: 1424px;
+  }
+
+  @media (max-width: 1424px) {
+    max-width: 1124px;
+  }
+
+  @media (max-width: 1124px) {
+    max-width: 824px;
+  }
+
+  @media (max-width: 824px) {
+    max-width: 524px;
+  }
+
+  @media (max-width: 500px) {
+    max-width: 428px;
+  }
+
+  @media (max-width: 400px) {
+    max-width: 396px;
+    width: 100%;
+  }
 `;
 
 const CustomParagraph = styled(Paragraph)`

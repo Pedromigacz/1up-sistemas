@@ -158,13 +158,28 @@ const CarouselButton = styled.button<CarouselButtonProps>`
   display: grid;
   place-items: center;
   border-radius: 100%;
-  position: relative;
   padding-left: 4px;
   /* right: ${(props) => (props.$rotate ? '90px' : '-90px')}; */
   margin-right: ${(props) => (props.$rotate ? '20px' : '0')};
   margin-left: ${(props) => (props.$rotate ? '0' : '20px')};
 
   transform: ${(props) => (props.$rotate ? 'rotate(180deg)' : 'none')};
+
+  @media (max-width: 500px) {
+    min-width: 40px;
+    height: 40px;
+
+    margin-right: ${(props) => (props.$rotate ? '-40px' : '0')};
+    margin-left: ${(props) => (props.$rotate ? '0' : '-40px')};
+    z-index: 2;
+    position: relative;
+    right: ${(props) => (props.$rotate ? '24px' : '-24px')};
+
+    svg {
+      scale: 0.6;
+      padding-left: 0px;
+    }
+  }
 `;
 
 const CustomSwiper = styled(Swiper)`
@@ -178,8 +193,9 @@ const CustomSwiperSlide = styled(SwiperSlide)`
   height: 480px;
   cursor: pointer;
 
-  @media (max-width: 400px) {
-    width: calc(100% - 32px);
+  @media (max-width: 500px) {
+    height: 380px;
+    max-width: 396px;
   }
 `;
 

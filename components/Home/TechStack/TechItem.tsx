@@ -53,6 +53,13 @@ const TechItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media (max-width: 500px) {
+    padding: 48px 32px 32px 32px;
+    max-width: 396px;
+    width: 100%;
+    height: 380px;
+  }
 `;
 
 const IconContainer = styled.div`
@@ -61,6 +68,10 @@ const IconContainer = styled.div`
   position: relative;
 
   margin-bottom: 17px;
+
+  @media (max-width: 500px) {
+    height: 40px;
+  }
 `;
 
 const CustomImage = styled(Image)`
@@ -79,6 +90,10 @@ const Title = styled.h3<TitleProps>`
   font-weight: 700;
   color: ${(props) =>
     props.$cyan ? 'var(--accent-cyan)' : 'var(--accent-blue)'};
+
+  @media (max-width: 500px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const Paragraph = styled.p`
@@ -87,6 +102,10 @@ const Paragraph = styled.p`
   font-weight: 400;
   font-size: 20px;
   line-height: 23px;
+
+  @media (max-width: 500px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const ShowcaseList = styled.ul`
@@ -95,6 +114,12 @@ const ShowcaseList = styled.ul`
   grid-template-columns: 1fr 1fr;
   gap: 22px;
   margin-top: auto;
+
+  @media (max-width: 500px) {
+    img {
+      width: 80%;
+    }
+  }
 `;
 
 const SocialProofIconWrapper = styled.li`
