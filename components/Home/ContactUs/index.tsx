@@ -45,12 +45,16 @@ const ContactSection = styled(GenericSection)`
 
 const ContactInnerContainer = styled(GenericInnerContainer)`
   display: block;
-  padding: 160px 32px;
+  padding: 64px 32px;
 
   @media (min-width: 1200px) {
     display: grid;
     grid-template-columns: 11fr 9fr;
     column-gap: 150px;
+  }
+
+  @media (min-width: 780px) {
+    padding: 160px 32px;
   }
 `;
 

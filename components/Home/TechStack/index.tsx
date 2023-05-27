@@ -29,6 +29,10 @@ const TechStackSection = styled(GenericSection)`
   background-repeat: no-repeat;
   padding: 200px 0;
 
+  @media (max-width: 780px) {
+    padding: 50px 0;
+  }
+
   @media (max-width: 500px) {
     display: block;
   }
@@ -68,6 +72,10 @@ const TechStackInnerContainer = styled(GenericInnerContainer)`
 
 const CustomParagraph = styled(Paragraph)`
   margin-bottom: 100px;
+
+  @media (max-width: 780px) {
+    margin-bottom: 32px;
+  }
 `;
 
 export default TechStackComponent;
