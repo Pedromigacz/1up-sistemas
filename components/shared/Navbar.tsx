@@ -16,6 +16,10 @@ import FacebookIcon from '@/components/shared/icons/facebookIcon';
 const NavbarComponent = (): JSX.Element => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const closeNavbar = () => {
+    setMobileOpen(false);
+  };
+
   return (
     <Nav as='nav'>
       <NavInnerContainer>
@@ -48,6 +52,7 @@ const NavbarComponent = (): JSX.Element => {
               transition={{
                 duration: 0.2,
               }}
+              onClick={closeNavbar}
             >
               <motion.li
                 initial={{
@@ -62,7 +67,9 @@ const NavbarComponent = (): JSX.Element => {
                   delay: 0.16,
                 }}
               >
-                <CustomLink href='#home'>Home</CustomLink>
+                <CustomLink href='#home' onClick={closeNavbar}>
+                  Home
+                </CustomLink>
               </motion.li>
               <motion.li
                 initial={{
@@ -77,7 +84,9 @@ const NavbarComponent = (): JSX.Element => {
                   delay: 0.22,
                 }}
               >
-                <CustomLink href='#servicos'>Serviços</CustomLink>
+                <CustomLink href='#servicos' onClick={closeNavbar}>
+                  Serviços
+                </CustomLink>
               </motion.li>
               <motion.li
                 initial={{
@@ -92,7 +101,9 @@ const NavbarComponent = (): JSX.Element => {
                   delay: 0.28,
                 }}
               >
-                <CustomLink href='#tecnologias'>Tecnologias</CustomLink>
+                <CustomLink href='#tecnologias' onClick={closeNavbar}>
+                  Tecnologias
+                </CustomLink>
               </motion.li>
               <motion.li
                 initial={{
