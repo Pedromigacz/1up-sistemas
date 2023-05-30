@@ -43,7 +43,8 @@ const CardsContainer = styled(GenericInnerContainer)`
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 
-  margin-bottom: 210px;
+  margin-top: 260px;
+  margin-bottom: 150px;
 
   li:nth-child(2n) svg path {
     fill: #2589bd;
@@ -56,7 +57,8 @@ const CardsContainer = styled(GenericInnerContainer)`
   @media (max-width: 780px) {
     display: flex;
     flex-direction: column;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
+    margin-top: 44px;
   }
 `;
 
