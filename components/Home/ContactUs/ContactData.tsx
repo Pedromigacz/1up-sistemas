@@ -9,21 +9,33 @@ const ContactDataComponent = (): JSX.Element => {
     <ContactData>
       <div>
         <Label>Telefone</Label>
-        <Paragraph>+123 4567 8912</Paragraph>
+        <Link
+          href='https://api.whatsapp.com/send/?phone=5515996744567&text&type=phone_number&app_absent=0'
+          target='_blank'
+        >
+          <Paragraph>(15) 9 9674-4567</Paragraph>
+        </Link>
       </div>
       <div>
         <Label>Email</Label>
-        <Paragraph>developer@company.com</Paragraph>
+        <Link href='mailto:contato@umupsistemas.com.br' target='_blank'>
+          <Paragraph>contato@umupsistemas.com.br</Paragraph>
+        </Link>
       </div>
       <div>
         <Label>Endereço</Label>
-        <Paragraph>Brazil, St. AB 12</Paragraph>
+        <Link href='https://goo.gl/maps/6ZNq1uUh5xoEuZAw6' target='_blank'>
+          <Paragraph>Rua Elias Valio, 99 Centro Pilar do Sul</Paragraph>
+        </Link>
       </div>
       <SocialMediaIconsContainer>
-        <Link href='#'>
+        <Link
+          href='https://www.facebook.com/profile.php?id=100091738211299'
+          target='_blank'
+        >
           <FacebookIcon />
         </Link>
-        <Link href='#'>
+        <Link href='https://www.instagram.com/umupsistemas/' target='_blank'>
           <InstagramIcon />
         </Link>
       </SocialMediaIconsContainer>
