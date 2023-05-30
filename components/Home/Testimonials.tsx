@@ -101,11 +101,7 @@ const CardsContainer = styled.ul`
 `;
 
 const Card = styled.li`
-<<<<<<< HEAD
   background-color: var(--background-2);
-=======
-  background-color: var(--background-4);
->>>>>>> 003669f289e496299fb1bed0094f5b9f65de2185
   padding: 50px 50px 80px 40px;
   border-radius: 20px;
 
