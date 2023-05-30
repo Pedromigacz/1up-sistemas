@@ -3,6 +3,7 @@ import HeroComponent from '@/components/Home/Hero';
 import ServicesComponents from '@/components/Home/Services';
 import ContactUsComponent from '@/components/Home/ContactUs';
 import TechStackComponent from '@/components/Home/TechStack';
+import TestimonialsSection from '@/components/Home/Testimonials';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <meta property='og:image' content='/og_share_image.png' />
       </Head>
       <HeroComponent />
+      <TestimonialsSection />
       <ServicesComponents />
       <TechStackComponent />
       <ContactUsComponent />
