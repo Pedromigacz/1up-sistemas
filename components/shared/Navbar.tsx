@@ -23,18 +23,24 @@ const NavbarComponent = (): JSX.Element => {
   return (
     <Nav as='nav'>
       <NavInnerContainer>
-        <Link href='#home'>
+        <Link href='#home' scroll={false}>
           <LogoIcon />
         </Link>
         <DesktopNavList>
           <li>
-            <CustomLink href='#home'>Home</CustomLink>
+            <CustomLink href='#home' scroll={false}>
+              Home
+            </CustomLink>
           </li>
           <li>
-            <CustomLink href='#servicos'>Serviços</CustomLink>
+            <CustomLink href='#servicos' scroll={false}>
+              Serviços
+            </CustomLink>
           </li>
           <li>
-            <CustomLink href='#tecnologias'>Tecnologias</CustomLink>
+            <CustomLink href='#tecnologias' scroll={false}>
+              Tecnologias
+            </CustomLink>
           </li>
         </DesktopNavList>
         <AnimatePresence>
@@ -67,7 +73,7 @@ const NavbarComponent = (): JSX.Element => {
                   delay: 0.16,
                 }}
               >
-                <CustomLink href='#home' onClick={closeNavbar}>
+                <CustomLink href='#home' onClick={closeNavbar} scroll={false}>
                   Home
                 </CustomLink>
               </motion.li>
@@ -84,7 +90,11 @@ const NavbarComponent = (): JSX.Element => {
                   delay: 0.22,
                 }}
               >
-                <CustomLink href='#servicos' onClick={closeNavbar}>
+                <CustomLink
+                  href='#servicos'
+                  onClick={closeNavbar}
+                  scroll={false}
+                >
                   Serviços
                 </CustomLink>
               </motion.li>
@@ -101,7 +111,11 @@ const NavbarComponent = (): JSX.Element => {
                   delay: 0.28,
                 }}
               >
-                <CustomLink href='#tecnologias' onClick={closeNavbar}>
+                <CustomLink
+                  href='#tecnologias'
+                  onClick={closeNavbar}
+                  scroll={false}
+                >
                   Tecnologias
                 </CustomLink>
               </motion.li>
@@ -118,7 +132,9 @@ const NavbarComponent = (): JSX.Element => {
                   delay: 0.34,
                 }}
               >
-                <CustomLink href='#contato'>Contato</CustomLink>
+                <CustomLink href='#contato' scroll={false}>
+                  Contato
+                </CustomLink>
               </motion.li>
               <SocialMediaListContainer>
                 <SocialMediaList>
@@ -168,7 +184,9 @@ const NavbarComponent = (): JSX.Element => {
           ) : null}
         </AnimatePresence>
 
-        <CtaButton href='#contato'>Entre em Contato</CtaButton>
+        <CtaButton href='#contato' scroll={false}>
+          Entre em Contato
+        </CtaButton>
         <BurguerMenu
           onClick={() => {
             setMobileOpen((prev) => !prev);
@@ -266,6 +284,7 @@ const MobileNavList = styled(motion.ul)`
 
 interface CtaButtonProps {
   href: string;
+  scroll: boolean;
 }
 
 const CtaButton = styled(MainButton).attrs({ as: Link })<CtaButtonProps>`

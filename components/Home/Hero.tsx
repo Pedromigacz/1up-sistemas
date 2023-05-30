@@ -7,6 +7,7 @@ import {
 } from '@/components/shared/sharedComponents';
 import styled from 'styled-components';
 import DoubleChevronIcon from '@/components/shared/icons/doubleChevron';
+import Link from 'next/link';
 
 const HeroComponent = (): JSX.Element => {
   return (
@@ -21,7 +22,7 @@ const HeroComponent = (): JSX.Element => {
             Tenha ao seu lado uma equipe experiente e dedicada de
             desenvolvedores que irão resolver as dores da sua empresa.
           </Paragraph>
-          <CustomButton>
+          <CustomButton href='#servicos' scroll={false}>
             Conheça Nossos Serviços <DoubleChevronIcon />
           </CustomButton>
         </HeroContainer>
@@ -80,7 +81,12 @@ const HeroContainer = styled.div`
   }
 `;
 
-const CustomButton = styled(MainButton)`
+interface CustomButtonProps {
+  href: string;
+  scroll: boolean;
+}
+
+const CustomButton = styled(MainButton).attrs({ as: Link })<CustomButtonProps>`
   margin: 50px auto 0 auto;
   display: flex;
   gap: 12px;

@@ -8,9 +8,13 @@ const GlobalStyles = createGlobalStyle`
     outline: none;
   }
 
-html {
-  font-size: 10px;
-}
+  * {
+    scroll-behavior: smooth;
+  }
+
+  html {
+    font-size: 10px;
+  }
 
 
   a {
