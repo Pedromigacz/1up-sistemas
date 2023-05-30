@@ -17,21 +17,21 @@ const FooterComponent = (): JSX.Element => {
   return (
     <Footer as='footer'>
       <FooterInnerContainer>
-        <Link href='#'>
+        <Link href='/'>
           <LogoIcon color='var(--text-negative-main)' />
         </Link>
         <FooterLinks>
           <FooterLinkContainer>
-            <Link href='#'>Home</Link>
+            <Link href='#home'>Home</Link>
           </FooterLinkContainer>
           <FooterLinkContainer>
-            <Link href='#'>Serviços</Link>
+            <Link href='#servicos'>Serviços</Link>
           </FooterLinkContainer>
           <FooterLinkContainer>
-            <Link href='#'>Tecnologias</Link>
+            <Link href='#tecnologias'>Tecnologias</Link>
           </FooterLinkContainer>
           <FooterLinkContainer>
-            <Link href='#'>Contato</Link>
+            <Link href='#contato'>Contato</Link>
           </FooterLinkContainer>
         </FooterLinks>
       </FooterInnerContainer>

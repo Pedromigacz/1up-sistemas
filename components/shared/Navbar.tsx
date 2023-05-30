@@ -19,16 +19,18 @@ const NavbarComponent = (): JSX.Element => {
   return (
     <Nav as='nav'>
       <NavInnerContainer>
-        <LogoIcon />
+        <Link href='#home'>
+          <LogoIcon />
+        </Link>
         <DesktopNavList>
           <li>
-            <CustomLink href='/'>Home</CustomLink>
+            <CustomLink href='#home'>Home</CustomLink>
           </li>
           <li>
-            <CustomLink href='/'>Serviços</CustomLink>
+            <CustomLink href='#servicos'>Serviços</CustomLink>
           </li>
           <li>
-            <CustomLink href='/'>Tecnologias</CustomLink>
+            <CustomLink href='#tecnologias'>Tecnologias</CustomLink>
           </li>
         </DesktopNavList>
         <AnimatePresence>
@@ -60,7 +62,7 @@ const NavbarComponent = (): JSX.Element => {
                   delay: 0.16,
                 }}
               >
-                <CustomLink href='/'>Home</CustomLink>
+                <CustomLink href='#home'>Home</CustomLink>
               </motion.li>
               <motion.li
                 initial={{
@@ -75,7 +77,7 @@ const NavbarComponent = (): JSX.Element => {
                   delay: 0.22,
                 }}
               >
-                <CustomLink href='/'>Serviços</CustomLink>
+                <CustomLink href='#servicos'>Serviços</CustomLink>
               </motion.li>
               <motion.li
                 initial={{
@@ -90,7 +92,7 @@ const NavbarComponent = (): JSX.Element => {
                   delay: 0.28,
                 }}
               >
-                <CustomLink href='/'>Tecnologias</CustomLink>
+                <CustomLink href='#tecnologias'>Tecnologias</CustomLink>
               </motion.li>
               <motion.li
                 initial={{
@@ -105,7 +107,7 @@ const NavbarComponent = (): JSX.Element => {
                   delay: 0.34,
                 }}
               >
-                <CustomLink href='/'>Contato</CustomLink>
+                <CustomLink href='#contato'>Contato</CustomLink>
               </motion.li>
               <SocialMediaListContainer>
                 <SocialMediaList>
@@ -122,7 +124,12 @@ const NavbarComponent = (): JSX.Element => {
                       delay: 0.4,
                     }}
                   >
-                    <InstagramIcon />
+                    <Link
+                      href='https://www.instagram.com/umupsistemas/'
+                      target='_blank'
+                    >
+                      <InstagramIcon />
+                    </Link>
                   </motion.li>
                   <motion.li
                     initial={{
@@ -137,7 +144,12 @@ const NavbarComponent = (): JSX.Element => {
                       delay: 0.4,
                     }}
                   >
-                    <FacebookIcon />
+                    <Link
+                      href='https://www.instagram.com/umupsistemas/'
+                      target='_blank'
+                    >
+                      <FacebookIcon />
+                    </Link>
                   </motion.li>
                 </SocialMediaList>
               </SocialMediaListContainer>
@@ -145,7 +157,7 @@ const NavbarComponent = (): JSX.Element => {
           ) : null}
         </AnimatePresence>
 
-        <CtaButton>Entre em Contato</CtaButton>
+        <CtaButton href='#contato'>Entre em Contato</CtaButton>
         <BurguerMenu
           onClick={() => {
             setMobileOpen((prev) => !prev);
@@ -241,7 +253,11 @@ const MobileNavList = styled(motion.ul)`
   }
 `;
 
-const CtaButton = styled(MainButton)`
+interface CtaButtonProps {
+  href: string;
+}
+
+const CtaButton = styled(MainButton).attrs({ as: Link })<CtaButtonProps>`
   @media (max-width: 999px) {
     display: none;
   }
