@@ -10,7 +10,7 @@ import DoubleChevronIcon from '@/components/shared/icons/doubleChevron';
 
 const HeroComponent = (): JSX.Element => {
   return (
-    <GenericSectionWithBackground>
+    <GenericSectionWithBackground id='home'>
       <GenericInnerContainer>
         <HeroContainer>
           <Title1>

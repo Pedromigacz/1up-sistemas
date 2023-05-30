@@ -72,7 +72,7 @@ const services = [
 
 const ServicesComponents = (): JSX.Element => {
   return (
-    <GenericSection>
+    <GenericSection id='servicos'>
       <ServicesSectionInnerContainer>
         <CustomTitle2>
           Conheça nosso serviço de <strong>Excelência</strong>

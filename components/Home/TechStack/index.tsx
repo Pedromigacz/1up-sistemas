@@ -9,7 +9,7 @@ import TechStackSliderComponent from './Slider';
 
 const TechStackComponent = (): JSX.Element => {
   return (
-    <TechStackSection>
+    <TechStackSection id='tecnologias'>
       <TechStackInnerContainer>
         <Title2>Tecnologias que Utilizamos</Title2>
         <CustomParagraph>

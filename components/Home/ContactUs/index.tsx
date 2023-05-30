@@ -13,7 +13,7 @@ import ContactDataComponent from './ContactData';
 
 const ContactUsComponent = (): JSX.Element => {
   return (
-    <ContactSection>
+    <ContactSection id='contato'>
       <ContactInnerContainer>
         <ContentContainer>
           <Title2>
