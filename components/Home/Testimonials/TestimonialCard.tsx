@@ -47,8 +47,12 @@ const Card = styled.li`
     0px -0.133002px 5.32008px rgba(0, 0, 0, 0.0282725),
     0px -0.0553451px 2.21381px rgba(0, 0, 0, 0.0196802);
 
-  @media (max-width: 1200px) {
-    padding: 40px 40px 34px 40px;
+  @media (max-width: 1400px) {
+    padding: 40px 40px 35px 40px;
+  }
+
+  @media (max-width: 400px) {
+    padding: 32px 32px 35px 32px;
   }
 `;
 
@@ -58,16 +62,33 @@ const ProfileContainer = styled.div`
   gap: 36px;
   margin-bottom: 48px;
 
-  @media (max-width: 1200px) {
-    img {
-      width: 45px;
-      height: 45px;
+  svg {
+    min-width: 29px;
+  }
+
+  @media (max-width: 1400px) {
+    margin-bottom: 32px;
+    gap: 20px;
+  }
+
+  @media (max-width: 780px) {
+    svg {
+      min-width: 18px;
+      width: 18px;
     }
+    gap: 10px;
   }
 `;
 
 const ImageContainer = styled.div`
   border-radius: 100%;
+
+  @media (max-width: 1400px) {
+    img {
+      width: 45px;
+      height: 45px;
+    }
+  }
 `;
 
 const Name = styled.h3`
@@ -77,6 +98,10 @@ const Name = styled.h3`
   line-height: 2.3rem;
 
   color: var(--text-main);
+
+  @media (max-width: 1400px) {
+    font-size: 2rem;
+  }
 `;
 
 const CompanyName = styled.p`
@@ -84,6 +109,10 @@ const CompanyName = styled.p`
   font-size: 2rem;
 
   color: var(--text-2);
+
+  @media (max-width: 1400px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const ProfileData = styled.div`
@@ -96,6 +125,11 @@ const CustomParagraph = styled(Paragraph)`
 
   @media (max-width: 1200px) {
     max-width: 390px;
+  }
+
+  @media (max-width: 1400px) {
+    font-size: 1.5rem;
+    line-height: 1.7rem;
   }
 `;
 

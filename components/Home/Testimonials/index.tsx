@@ -50,6 +50,10 @@ const CardsContainer = styled(GenericInnerContainer)`
   }
 
   @media (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 780px) {
     display: flex;
     flex-direction: column;
     margin-bottom: 60px;
