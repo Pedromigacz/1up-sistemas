@@ -8,8 +8,15 @@ import {
   Title2,
 } from '@/components/shared/sharedComponents';
 import ContactIllustration from '@/public/images/contato.png';
-import FormComponent from '@/components/Home/ContactUs/Form';
 import ContactDataComponent from './ContactData';
+import dynamic from 'next/dynamic';
+
+const FormComponent = dynamic(
+  () => import('@/components/Home/ContactUs/Form'),
+  {
+    suspense: true,
+  }
+);
 
 const ContactUsComponent = (): JSX.Element => {
   return (
