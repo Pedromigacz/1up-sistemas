@@ -36,7 +36,6 @@ const GenericSectionWithBackground = styled(GenericSection)`
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
-  margin-top: 48px;
   padding-top: 85px;
   padding-bottom: 56px;
 
@@ -44,6 +43,8 @@ const GenericSectionWithBackground = styled(GenericSection)`
     padding-top: 0px;
     padding-bottom: 0px;
     background-size: 100% 205px;
+    margin-top: 120px;
+    margin-bottom: 120px;
   }
 
   @media (max-width: 1000px) {
