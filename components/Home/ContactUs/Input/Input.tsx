@@ -30,6 +30,7 @@ const Input = ({ label, type, value, setValue }: InputProps): JSX.Element => {
           fontSize: inputTriggered ? '1.6rem' : '2rem',
           color: inputTriggered ? 'var(--accent-cyan)' : 'var(--text-2)',
         }}
+        htmlFor={label.replace(' ', '')}
       >
         {label}
       </Label>
@@ -45,6 +46,7 @@ const Input = ({ label, type, value, setValue }: InputProps): JSX.Element => {
         onBlur={() => {
           setFocused(false);
         }}
+        id={label.replace(' ', '')}
       />
     </InputWrapper>
   );
