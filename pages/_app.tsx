@@ -3,8 +3,8 @@ import localFont from 'next/font/local';
 
 import GlobalStyles from '@/components/shared/globaStyles';
 import CssVariables from '@/components/shared/variables';
-import NavbarComponent from '@/components/shared/Navbar';
 import FooterComponent from '@/components/shared/Footer';
+import dynamic from 'next/dynamic';
 
 const justSans = localFont({
   src: [
@@ -49,6 +49,10 @@ const argentumSans = localFont({
       style: 'normal',
     },
   ],
+});
+
+const NavbarComponent = dynamic(() => import('@/components/shared/Navbar'), {
+  suspense: true,
 });
 
 export default function App({ Component, pageProps }: AppProps) {
