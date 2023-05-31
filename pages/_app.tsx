@@ -7,6 +7,7 @@ import FooterComponent from '@/components/shared/Footer';
 import dynamic from 'next/dynamic';
 
 const justSans = localFont({
+  preload: true,
   src: [
     {
       path: '../public/fonts/just-sans/JustSansExBold.otf',
@@ -22,6 +23,7 @@ const justSans = localFont({
 });
 
 const argentumSans = localFont({
+  preload: true,
   src: [
     {
       path: '../public/fonts/argentum-sans/ArgentumSans-Black.ttf',
