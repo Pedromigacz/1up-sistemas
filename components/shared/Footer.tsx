@@ -11,7 +11,7 @@ const FooterComponent = (): JSX.Element => {
   return (
     <Footer as='footer'>
       <FooterInnerContainer>
-        <Link href='#home' scroll={false}>
+        <Link href='#home' scroll={false} aria-label='Scrollar a seção inicial'>
           <LogoIcon color='var(--text-negative-main)' />
         </Link>
         <FooterLinks>

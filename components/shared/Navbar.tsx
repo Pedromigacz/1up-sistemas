@@ -154,6 +154,7 @@ const NavbarComponent = (): JSX.Element => {
                     <Link
                       href='https://www.instagram.com/umupsistemas/'
                       target='_blank'
+                      aria-label='Página do instagram'
                     >
                       <InstagramIcon />
                     </Link>
@@ -174,6 +175,7 @@ const NavbarComponent = (): JSX.Element => {
                     <Link
                       href='https://www.instagram.com/umupsistemas/'
                       target='_blank'
+                      aria-label='Página do facebook'
                     >
                       <FacebookIcon />
                     </Link>

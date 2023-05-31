@@ -32,10 +32,15 @@ const ContactDataComponent = (): JSX.Element => {
         <Link
           href='https://www.facebook.com/profile.php?id=100091738211299'
           target='_blank'
+          aria-label='Página do facebook'
         >
           <FacebookIcon />
         </Link>
-        <Link href='https://www.instagram.com/umupsistemas/' target='_blank'>
+        <Link
+          href='https://www.instagram.com/umupsistemas/'
+          target='_blank'
+          aria-label='Página do instagram'
+        >
           <InstagramIcon />
         </Link>
       </SocialMediaIconsContainer>
