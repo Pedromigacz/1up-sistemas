@@ -23,7 +23,7 @@ const NavbarComponent = (): JSX.Element => {
   return (
     <Nav as='nav'>
       <NavInnerContainer>
-        <Link href='#home' scroll={false}>
+        <Link href='#home' scroll={false} aria-label='Subir a seção inicial'>
           <LogoIcon />
         </Link>
         <DesktopNavList>

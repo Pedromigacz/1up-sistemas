@@ -33,6 +33,7 @@ const TextAreaInput = ({
           fontSize: textAreaTriggered ? '1.6rem' : '2rem',
           color: textAreaTriggered ? 'var(--accent-cyan)' : 'var(--text-2)',
         }}
+        htmlFor={label.replace(' ', '')}
       >
         {label}
       </Label>
@@ -48,6 +49,7 @@ const TextAreaInput = ({
         onBlur={() => {
           setFocused(false);
         }}
+        id={label.replace(' ', '')}
       />
     </InputWrapper>
   );
