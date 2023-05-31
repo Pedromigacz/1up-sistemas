@@ -5,7 +5,11 @@ import {
   Title2,
 } from '@/components/shared/sharedComponents';
 import styled from 'styled-components';
-import TechStackSliderComponent from './Slider';
+import dynamic from 'next/dynamic';
+
+const TechStackSliderComponent = dynamic(() => import('./Slider'), {
+  suspense: true,
+});
 
 const TechStackComponent = (): JSX.Element => {
   return (
