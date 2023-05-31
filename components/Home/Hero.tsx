@@ -32,7 +32,7 @@ const HeroComponent = (): JSX.Element => {
 };
 
 const GenericSectionWithBackground = styled(GenericSection)`
-  background-image: url('/images/HeroGrid.svg#svgView(preserveAspectRatio(none))');
+  /* background-image: url('/images/HeroGrid.svg#svgView(preserveAspectRatio(none))'); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
