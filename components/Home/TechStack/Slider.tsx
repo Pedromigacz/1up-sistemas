@@ -100,6 +100,7 @@ const TechStackSliderComponent = (): JSX.Element => {
           // @ts-ignore
           swiperRef.current.slidePrev();
         }}
+        aria-label='Navegar ao slide anterior'
       >
         <CarouselArrow />
       </CarouselButton>
@@ -133,6 +134,7 @@ const TechStackSliderComponent = (): JSX.Element => {
           // @ts-ignore
           swiperRef.current.slideNext();
         }}
+        aria-label='Navegar ao próximos slide'
       >
         <CarouselArrow />
       </CarouselButton>

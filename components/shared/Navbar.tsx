@@ -192,6 +192,7 @@ const NavbarComponent = (): JSX.Element => {
             setMobileOpen((prev) => !prev);
           }}
           $active={mobileOpen}
+          aria-label='abrir/fechar menu mobile'
         >
           <BurguerMenuIcon />
         </BurguerMenu>

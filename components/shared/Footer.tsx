@@ -1,17 +1,11 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-import { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 
 import {
   GenericInnerContainer,
   GenericSection,
-  MainButton,
 } from '@/components/shared/sharedComponents';
 import LogoIcon from '@/components/shared/icons/logo';
-import BurguerMenuIcon from '@/components/shared/icons/burguerMenuIcon';
-import InstagramIcon from '@/components/shared/icons/instagramIcon';
-import FacebookIcon from '@/components/shared/icons/facebookIcon';
 
 const FooterComponent = (): JSX.Element => {
   return (
