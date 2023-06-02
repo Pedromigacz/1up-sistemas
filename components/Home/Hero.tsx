@@ -8,34 +8,49 @@ import {
 import styled from 'styled-components';
 import DoubleChevronIcon from '@/components/shared/icons/doubleChevron';
 import Link from 'next/link';
+import HeroGridBackground from '../shared/icons/HeroGrid';
 
 const HeroComponent = (): JSX.Element => {
   return (
-    <GenericSectionWithBackground id='home'>
-      <GenericInnerContainer>
-        <HeroContainer>
-          <Title1>
-            Softwares <strong>personalizados</strong> para aumentar sua{' '}
-            <strong>eficiência</strong>. Dê <strong>Um UP!</strong>
-          </Title1>
-          <Paragraph as='h2'>
-            Tenha ao seu lado uma equipe experiente e dedicada de
-            desenvolvedores que irão resolver as dores da sua empresa.
-          </Paragraph>
-          <CustomButton href='#servicos' scroll={false}>
-            Conheça Nossos Serviços <DoubleChevronIcon />
-          </CustomButton>
-        </HeroContainer>
-      </GenericInnerContainer>
-    </GenericSectionWithBackground>
+    <>
+      <GenericSectionWithBackground id='home'>
+        <BackgroundSvg>
+          <HeroGridBackground />
+        </BackgroundSvg>
+        <HomeSectionInnerContainer>
+          <HeroContainer>
+            <Title1>
+              Softwares <strong>personalizados</strong> para aumentar sua{' '}
+              <strong>eficiência</strong>. Dê <strong>Um UP!</strong>
+            </Title1>
+            <Paragraph as='h2'>
+              Tenha ao seu lado uma equipe experiente e dedicada de
+              desenvolvedores que irão resolver as dores da sua empresa.
+            </Paragraph>
+            <CustomButton href='#servicos' scroll={false}>
+              Conheça Nossos Serviços <DoubleChevronIcon />
+            </CustomButton>
+          </HeroContainer>
+        </HomeSectionInnerContainer>
+      </GenericSectionWithBackground>
+    </>
   );
 };
 
+const BackgroundSvg = styled.div`
+  position: relative;
+  grid-row-start: 1;
+  grid-column-start: 1;
+`;
+
+const HomeSectionInnerContainer = styled(GenericInnerContainer)`
+  grid-row-start: 1;
+  grid-column-start: 1;
+`;
+
 const GenericSectionWithBackground = styled(GenericSection)`
-  background-image: url('/images/HeroGrid.svg#svgView(preserveAspectRatio(none))');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
   padding-top: 85px;
   padding-bottom: 56px;
 
