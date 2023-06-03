@@ -2,6 +2,7 @@ import { FormEventHandler, useState } from 'react';
 import ContactInput from './Input';
 import styled from 'styled-components';
 import { MainButton } from '@/components/shared/sharedComponents';
+import axios from 'axios';
 
 const FormComponent = (): JSX.Element => {
   const [form, setForm] = useState({
@@ -20,6 +21,24 @@ const FormComponent = (): JSX.Element => {
     }
 
     setLoading(true);
+
+    const formData = new FormData();
+
+    formData.append('nome', form.nome);
+    formData.append('email', form.email);
+    formData.append('mensagem', form.mensagem);
+
+    axios({
+      method: 'post',
+      url: '/',
+      data: formData,
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    })
+      .then(() => alert('Thank you for your submission'))
+      .catch((error) => alert(error))
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
