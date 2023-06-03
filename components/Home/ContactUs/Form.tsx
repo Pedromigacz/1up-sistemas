@@ -24,6 +24,7 @@ const FormComponent = (): JSX.Element => {
 
     const formData = new FormData();
 
+    formData.append('form-name', 'contato');
     formData.append('nome', form.nome);
     formData.append('email', form.email);
     formData.append('mensagem', form.mensagem);
