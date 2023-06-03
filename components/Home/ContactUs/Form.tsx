@@ -29,19 +29,21 @@ const FormComponent = (): JSX.Element => {
       return;
     }
 
-    if (form.email.length >= 1) {
+    if (form.email.length <= 1) {
       setFeedback({
         error: `Email é obrigatório para envio da mensagem`,
         success: '',
       });
+      setLoading(false);
       return;
     }
 
-    if (form.mensagem.length >= 1) {
+    if (form.mensagem.length <= 1) {
       setFeedback({
         error: `Erro - mensagem vazia`,
         success: '',
       });
+      setLoading(false);
       return;
     }
 
