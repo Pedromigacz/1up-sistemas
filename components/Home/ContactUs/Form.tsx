@@ -23,7 +23,8 @@ const FormComponent = (): JSX.Element => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit} name='contato' data-netlify='true'>
+      <input type='hidden' name='form-name' value='contact' />
       <ContactInput
         value={form.nome}
         setValue={(val) => {
