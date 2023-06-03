@@ -8,12 +8,14 @@ interface TextAreaProps {
   label: string;
   value: string;
   setValue: (value: string) => void;
+  name: string;
 }
 
 const TextAreaInput = ({
   label,
   value,
   setValue,
+  name,
 }: TextAreaProps): JSX.Element => {
   const [focused, setFocused] = useState(false);
 
@@ -50,6 +52,7 @@ const TextAreaInput = ({
           setFocused(false);
         }}
         id={label.replace(' ', '')}
+        name={name}
       />
     </InputWrapper>
   );

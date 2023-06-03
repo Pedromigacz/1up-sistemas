@@ -25,9 +25,9 @@ const FormComponent = (): JSX.Element => {
     const formData = new FormData();
 
     formData.append('form-name', 'contato');
-    formData.append('Nome Completo', form.nome);
-    formData.append('Endereço de Email', form.email);
-    formData.append('Escreva sua Mensagem', form.mensagem);
+    formData.append('Nome', form.nome);
+    formData.append('Email', form.email);
+    formData.append('Mensagem', form.mensagem);
 
     axios({
       method: 'post',
@@ -51,6 +51,7 @@ const FormComponent = (): JSX.Element => {
           setForm((prev) => ({ ...prev, nome: val }));
         }}
         label={'Nome Completo'}
+        name='Nome'
       />
       <ContactInput
         value={form.email}
@@ -58,6 +59,7 @@ const FormComponent = (): JSX.Element => {
           setForm((prev) => ({ ...prev, email: val }));
         }}
         label={'Endereço de Email'}
+        name='Email'
       />
       <ContactInput
         value={form.mensagem}
@@ -66,6 +68,7 @@ const FormComponent = (): JSX.Element => {
         }}
         type='text-area'
         label={'Escreva sua Mensagem'}
+        name='Mensagem'
       />
       <CustomMainButton type='submit'>
         {loading ? 'Carregando...' : 'Enviar'}

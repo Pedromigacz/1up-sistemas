@@ -8,10 +8,17 @@ interface InputProps {
   label: string;
   type: string;
   value: string;
+  name: string;
   setValue: (value: string) => void;
 }
 
-const Input = ({ label, type, value, setValue }: InputProps): JSX.Element => {
+const Input = ({
+  label,
+  type,
+  value,
+  setValue,
+  name,
+}: InputProps): JSX.Element => {
   const [focused, setFocused] = useState(false);
 
   const inputTriggered = value.length > 0 || focused;
@@ -35,6 +42,7 @@ const Input = ({ label, type, value, setValue }: InputProps): JSX.Element => {
         {label}
       </Label>
       <CustomInput
+        name={name}
         type={type}
         value={value}
         onChange={(e) => {

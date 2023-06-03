@@ -8,6 +8,7 @@ interface ContactInputProps {
   type?: 'text' | 'text-area' | 'select';
   value: string;
   setValue: (value: string) => void;
+  name: string;
   options?: {
     value: string;
     name: string;
@@ -19,15 +20,29 @@ const ContactInput = ({
   type = 'text',
   value,
   setValue,
+  name,
 }: ContactInputProps): JSX.Element => {
   switch (type) {
     case 'text-area': {
-      return <TextAreaInput label={label} value={value} setValue={setValue} />;
+      return (
+        <TextAreaInput
+          label={label}
+          value={value}
+          setValue={setValue}
+          name={name}
+        />
+      );
     }
 
     default: {
       return (
-        <Input label={label} type={type} value={value} setValue={setValue} />
+        <Input
+          label={label}
+          type={type}
+          value={value}
+          setValue={setValue}
+          name={name}
+        />
       );
     }
   }
