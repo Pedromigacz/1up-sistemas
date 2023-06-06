@@ -73,7 +73,7 @@ const services = [
 
 const ServicesComponents = (): JSX.Element => {
   return (
-    <GenericSection id='servicos'>
+    <ServicesSection id='servicos'>
       <ServicesSectionInnerContainer>
         <CustomTitle2>
           Conheça nosso serviço de <strong>Excelência</strong>
@@ -89,9 +89,16 @@ const ServicesComponents = (): JSX.Element => {
         </ServicesContainer>
         {/* <Service /> */}
       </ServicesSectionInnerContainer>
-    </GenericSection>
+    </ServicesSection>
   );
 };
+
+const ServicesSection = styled(GenericSection)`
+  @media (max-width: 1000px) {
+    padding-top: 100px;
+    margin-top: -100px;
+  }
+`;
 
 const ServicesSectionInnerContainer = styled(GenericInnerContainer)`
   padding-top: 50px;

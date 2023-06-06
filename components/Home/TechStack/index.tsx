@@ -33,8 +33,13 @@ const TechStackSection = styled(GenericSection)`
   background-repeat: no-repeat;
   padding: 200px 0;
 
+  @media (max-width: 1000px) {
+    padding-top: 100px;
+    margin-top: -100px;
+  }
+
   @media (max-width: 780px) {
-    padding: 50px 0;
+    padding: 150px 0 50px 0;
   }
 
   @media (max-width: 500px) {

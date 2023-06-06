@@ -12,28 +12,26 @@ import HeroGridBackground from '../shared/icons/HeroGrid';
 
 const HeroComponent = (): JSX.Element => {
   return (
-    <>
-      <GenericSectionWithBackground id='home'>
-        <BackgroundSvg>
-          <HeroGridBackground />
-        </BackgroundSvg>
-        <HomeSectionInnerContainer>
-          <HeroContainer>
-            <Title1>
-              Softwares <strong>personalizados</strong> para aumentar sua{' '}
-              <strong>eficiência</strong>. Dê <strong>Um UP!</strong>
-            </Title1>
-            <Paragraph as='h2'>
-              Tenha ao seu lado uma equipe experiente e dedicada de
-              desenvolvedores que irão resolver as dores da sua empresa.
-            </Paragraph>
-            <CustomButton href='#servicos' scroll={false}>
-              Conheça Nossos Serviços <DoubleChevronIcon />
-            </CustomButton>
-          </HeroContainer>
-        </HomeSectionInnerContainer>
-      </GenericSectionWithBackground>
-    </>
+    <GenericSectionWithBackground id='home'>
+      <BackgroundSvg>
+        <HeroGridBackground />
+      </BackgroundSvg>
+      <HomeSectionInnerContainer>
+        <HeroContainer>
+          <Title1>
+            Softwares <strong>personalizados</strong> para aumentar sua{' '}
+            <strong>eficiência</strong>. Dê <strong>Um UP!</strong>
+          </Title1>
+          <Paragraph as='h2'>
+            Tenha ao seu lado uma equipe experiente e dedicada de
+            desenvolvedores que irão resolver as dores da sua empresa.
+          </Paragraph>
+          <CustomButton href='#servicos' scroll={false}>
+            Conheça Nossos Serviços <DoubleChevronIcon />
+          </CustomButton>
+        </HeroContainer>
+      </HomeSectionInnerContainer>
+    </GenericSectionWithBackground>
   );
 };
 

@@ -48,6 +48,11 @@ const ContactUsComponent = (): JSX.Element => {
 
 const ContactSection = styled(GenericSection)`
   background-color: var(--background-2);
+
+  @media (max-width: 1000px) {
+    padding-top: 100px;
+    margin-top: -100px;
+  }
 `;
 
 const ContactInnerContainer = styled(GenericInnerContainer)`
