@@ -3,6 +3,7 @@ import { Paragraph } from '@/components/shared/sharedComponents';
 import Link from 'next/link';
 import FacebookIcon from '@/components/shared/icons/facebookIcon';
 import InstagramIcon from '@/components/shared/icons/instagramIcon';
+import WhatsAppIcon from '@/components/shared/icons/whatsappIcon';
 
 const ContactDataComponent = (): JSX.Element => {
   return (
@@ -42,6 +43,13 @@ const ContactDataComponent = (): JSX.Element => {
           aria-label='Página do instagram'
         >
           <InstagramIcon />
+        </Link>
+        <Link
+          href='https://api.whatsapp.com/send/?phone=5515996744567&text&type=phone_number&app_absent=0'
+          target='_blank'
+          aria-label='Página do instagram'
+        >
+          <WhatsAppIcon />
         </Link>
       </SocialMediaIconsContainer>
     </ContactData>

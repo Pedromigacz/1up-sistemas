@@ -12,6 +12,7 @@ import LogoIcon from '@/components/shared/icons/logo';
 import BurguerMenuIcon from '@/components/shared/icons/burguerMenuIcon';
 import InstagramIcon from '@/components/shared/icons/instagramIcon';
 import FacebookIcon from '@/components/shared/icons/facebookIcon';
+import WhatsAppIcon from '@/components/shared/icons/whatsappIcon';
 
 const NavbarComponent = (): JSX.Element => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -178,6 +179,27 @@ const NavbarComponent = (): JSX.Element => {
                       aria-label='Página do facebook'
                     >
                       <FacebookIcon />
+                    </Link>
+                  </motion.li>
+                  <motion.li
+                    initial={{
+                      y: 60,
+                      opacity: 0,
+                    }}
+                    animate={{
+                      y: 0,
+                      opacity: 1,
+                    }}
+                    transition={{
+                      delay: 0.4,
+                    }}
+                  >
+                    <Link
+                      href='https://api.whatsapp.com/send/?phone=5515996744567&text&type=phone_number&app_absent=0'
+                      target='_blank'
+                      aria-label='Contato via whatsapp'
+                    >
+                      <WhatsAppIcon />
                     </Link>
                   </motion.li>
                 </SocialMediaList>
