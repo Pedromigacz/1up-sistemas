@@ -51,6 +51,7 @@ const services = [
       </>,
       <>Chatbot</>,
       <>Reconhecimento Facial</>,
+      <>Análise de Dados</>,
     ],
   },
   {
