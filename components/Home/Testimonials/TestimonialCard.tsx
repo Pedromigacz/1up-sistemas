@@ -40,6 +40,11 @@ const Card = styled.li`
   padding: 48px 40px 56px 40px;
   border-radius: 20px;
 
+  /* temporary styles */
+  max-width: 378px;
+  margin: 0 auto;
+  /* temporery styles */
+
   box-shadow: 0px -2px 80px rgba(0, 0, 0, 0.5),
     0px -0.835552px 33.4221px rgba(0, 0, 0, 0.0503198),
     0px -0.446726px 17.869px rgba(0, 0, 0, 0.0417275),

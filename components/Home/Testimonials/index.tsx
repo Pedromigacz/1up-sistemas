@@ -39,7 +39,7 @@ const TestimonialsSection = (): JSX.Element => {
 
 const CardsContainer = styled(GenericInnerContainer)`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr; */
   gap: 20px;
 
   margin-top: 260px;
@@ -49,9 +49,9 @@ const CardsContainer = styled(GenericInnerContainer)`
     fill: #2589bd;
   }
 
-  @media (max-width: 1200px) {
+  /* @media (max-width: 1200px) {
     grid-template-columns: 1fr 1fr;
-  }
+  } */
 
   @media (max-width: 780px) {
     display: flex;
