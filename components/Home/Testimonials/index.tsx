@@ -20,7 +20,7 @@ const TestimonialsSection = (): JSX.Element => {
           image={ClientOne}
           testimonial='Tivemos experiências muito positivas trabalhando com o pessoal da 1up Sistemas. Profissionalismo e atendimento ao cliente impecáveis.'
         />
-        <TestimonialCard
+        {/* <TestimonialCard
           name='João'
           companyName='Facebook'
           image={ClientTwo}
@@ -31,8 +31,7 @@ const TestimonialsSection = (): JSX.Element => {
           companyName='Nome de Empresa'
           image={ClientThree}
           testimonial='I was blown away by the level of professionalism and attention to detail that this company provided. From start to finish, they made my experience easy and stress-free.'
-        />
-        {/* IMPORTANTE SEMPRE ADICIONAR DEPOIMENTOS DE 3 EM 3 PARA NÃO QUEBRAR O LAYOUT */}
+        /> */}
       </CardsContainer>
     </GenericSection>
   );
